@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <rect width="120" height="120" x="4" y="4" rx="26" fill="#222B56" stroke="#F8B800" stroke-width="4"/>
+  <!-- Mortarboard Diamond -->
+  <polygon points="64,28 104,46 64,64 24,46" fill="#FFFFFF"/>
+  <!-- Skull Cap Underneath -->
+  <path d="M42,52 L86,52 L86,70 Q64,84 42,70 Z" fill="#D2DCF0"/>
+  <!-- Tassel -->
+  <path d="M64,46 Q92,54 92,86" stroke="#F8B800" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <circle cx="92" cy="88" r="4" fill="#F8B800"/>
+  <!-- SAML 12 Badge -->
+  <rect x="36" y="86" width="56" height="26" rx="13" fill="#F8B800"/>
+  <text x="64" y="104" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="900" fill="#222B56" text-anchor="middle">SAML 12</text>
+</svg>
+

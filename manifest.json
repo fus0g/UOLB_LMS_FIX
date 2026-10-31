@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "UoL Bengaluru Canvas SAML Auto-Login",
+  "version": "1.0.0",
+  "description": "Automatically redirects Canvas LMS login pages to University SAML 12 SSO for UoL Bengaluru.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Canvas SAML Login"
+  },
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "*://www.lms.bengaluru.liverpool.ac.uk/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.lms.bengaluru.liverpool.ac.uk/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "uol-bengaluru-canvas-saml@liverpool.ac.uk",
+      "strict_min_version": "109.0"
+    }
+  }
+}
+

@@ -1,0 +1,581 @@
+/* ==========================================================================
+   Liverpool Bengaluru Canvas LMS - SAML Auto-Login & Completion Tracker Styles
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. SAML Login Enhancements
+   -------------------------------------------------------------------------- */
+.uol-saml-btn-container {
+  margin: 0 0 18px 0;
+  padding: 0;
+  text-align: center;
+}
+
+.uol-saml-btn {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 16px !important;
+  background-color: #222B56 !important; /* Liverpool Navy */
+  color: #FFFFFF !important;
+  border: 2px solid #F8B800 !important; /* Gold accent */
+  border-radius: 6px !important;
+  font-family: Lato, system-ui, -apple-system, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 3px 6px rgba(34, 43, 86, 0.25);
+}
+
+.uol-saml-btn:hover {
+  background-color: #171d3d !important;
+  border-color: #ffd043 !important;
+  color: #FFFFFF !important;
+  text-decoration: none !important;
+  box-shadow: 0 4px 10px rgba(34, 43, 86, 0.35);
+  transform: translateY(-1px);
+}
+
+.uol-saml-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(34, 43, 86, 0.2);
+}
+
+.uol-saml-btn svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.uol-saml-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 16px 0;
+  color: #737373;
+  font-size: 13px;
+}
+
+.uol-saml-divider::before,
+.uol-saml-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.uol-saml-divider span {
+  padding: 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* Loop Warning / Pause Banner */
+.uol-saml-banner {
+  background-color: #fff8e6;
+  border-left: 4px solid #f8b800;
+  color: #614700;
+  padding: 12px 16px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  font-size: 13px;
+  line-height: 1.5;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.uol-saml-banner strong {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #3d2d00;
+}
+
+.uol-saml-banner a.uol-saml-link {
+  color: #222B56;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.uol-saml-banner a.uol-saml-link:hover {
+  color: #0b112c;
+}
+
+/* Redirection Overlay Toast */
+.uol-saml-redirect-overlay {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 9999999;
+  background: #222B56;
+  color: #FFFFFF;
+  border: 1px solid #F8B800;
+  border-radius: 8px;
+  padding: 12px 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  font-family: Lato, system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: uolSlideIn 0.25s ease-out;
+}
+
+@keyframes uolSlideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.uol-saml-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #F8B800;
+  border-radius: 50%;
+  animation: uolSpin 0.7s linear infinite;
+}
+
+@keyframes uolSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. Course Completion Checker & Header Banner
+   -------------------------------------------------------------------------- */
+.uol-tracker-card {
+  background: #ffffff;
+  border: 1px solid #d9e2ec;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 15px 0 24px 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  font-family: Lato, system-ui, -apple-system, sans-serif;
+  position: relative;
+  border-top: 4px solid #222B56;
+}
+
+.uol-tracker-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.uol-tracker-title-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.uol-tracker-badge {
+  background: #222B56;
+  color: #F8B800;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.uol-tracker-heading {
+  font-size: 16px;
+  font-weight: 700;
+  color: #102a43;
+  margin: 0;
+}
+
+.uol-tracker-stats {
+  font-size: 14px;
+  font-weight: 700;
+  color: #222B56;
+}
+
+.uol-tracker-stats span.pct {
+  color: #059669;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* Progress bar */
+.uol-progress-track {
+  width: 100%;
+  height: 10px;
+  background-color: #e2e8f0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.uol-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #222B56 0%, #10b981 100%);
+  border-radius: 5px;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Filter and action toolbar */
+.uol-tracker-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #edf2f7;
+}
+
+.uol-filter-group {
+  display: flex;
+  gap: 6px;
+}
+
+.uol-filter-btn {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 11px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.uol-filter-btn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.uol-filter-btn.active {
+  background: #222B56;
+  border-color: #222B56;
+  color: #ffffff;
+}
+
+.uol-tracker-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.uol-tool-btn {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+}
+
+.uol-tool-btn:hover {
+  background: #f8fafc;
+  color: #0f172a;
+  border-color: #94a3b8;
+}
+
+.uol-tool-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* --------------------------------------------------------------------------
+   3. Per-Module Progress Pills
+   -------------------------------------------------------------------------- */
+.uol-module-progress-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 14px;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #334155;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.uol-module-progress-pill.completed {
+  background: #ecfdf5;
+  border-color: #a7f3d0;
+  color: #065f46;
+}
+
+.uol-module-mini-bar {
+  width: 32px;
+  height: 6px;
+  background: #cbd5e1;
+  border-radius: 3px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.uol-module-mini-fill {
+  height: 100%;
+  background: #10b981;
+  transition: width 0.3s ease;
+}
+
+/* --------------------------------------------------------------------------
+   4. Interactive Item Checkbox
+   -------------------------------------------------------------------------- */
+.uol-checkbox-btn {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #94a3b8;
+  background-color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0 auto;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.uol-checkbox-btn:hover {
+  border-color: #10b981;
+  transform: scale(1.15);
+  box-shadow: 0 0 6px rgba(16, 185, 129, 0.3);
+}
+
+.uol-checkbox-btn.checked {
+  background-color: #10b981;
+  border-color: #10b981;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.4);
+}
+
+.uol-checkbox-btn svg {
+  width: 13px;
+  height: 13px;
+  stroke: #ffffff;
+  stroke-width: 3;
+  fill: none;
+  display: none;
+}
+
+.uol-checkbox-btn.checked svg {
+  display: block;
+}
+
+/* Completed Row Styling */
+.context_module_item.uol-item-completed {
+  background-color: #f8fafc !important;
+}
+
+.context_module_item.uol-item-completed .ig-row {
+  background-color: #f8fafc !important;
+}
+
+.context_module_item.uol-item-completed .item_name a.ig-title {
+  color: #64748b !important;
+  position: relative;
+}
+
+.context_module_item.uol-item-completed .item_name a.ig-title::after {
+  content: '✓ Done';
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #059669;
+  background: #d1fae5;
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+/* Filter hiding */
+.context_module_item.uol-filter-hidden {
+  display: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   5. Study Activity Logger Drawer / Modal
+   -------------------------------------------------------------------------- */
+.uol-log-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(2px);
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease;
+}
+
+.uol-log-modal-backdrop.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.uol-log-modal {
+  width: 90%;
+  max-width: 680px;
+  max-height: 85vh;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: translateY(20px);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: Lato, system-ui, -apple-system, sans-serif;
+}
+
+.uol-log-modal-backdrop.open .uol-log-modal {
+  transform: translateY(0);
+}
+
+.uol-log-modal-header {
+  background: #222B56;
+  color: #ffffff;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 3px solid #F8B800;
+}
+
+.uol-log-modal-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.uol-log-close-btn {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 22px;
+  cursor: pointer;
+  line-height: 1;
+  opacity: 0.8;
+  padding: 4px 8px;
+}
+
+.uol-log-close-btn:hover {
+  opacity: 1;
+}
+
+.uol-log-modal-body {
+  padding: 16px 20px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.uol-log-empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.uol-log-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.uol-log-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.uol-log-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 12px;
+}
+
+.uol-log-icon.completed {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.uol-log-icon.viewed {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.uol-log-icon.uncompleted {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.uol-log-content {
+  flex: 1;
+}
+
+.uol-log-text {
+  color: #1e293b;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.uol-log-meta {
+  color: #64748b;
+  font-size: 11px;
+}
+
+.uol-log-modal-footer {
+  padding: 12px 20px;
+  background: #f1f5f9;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
